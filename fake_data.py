@@ -18,9 +18,9 @@ def generate_fake_data(num_rows):
     for _ in range(num_rows):
         data["idade"].append(random.randint(18, 90))
         data["cpf"].append(fake.cpf().replace('.', '').replace('-', ''))
-        data["rg"].append(random.randint(10000000, 99999999))  # RG normalmente é um número de 8 dígitos
-        data["altura"].append(random.randint(150, 200))  # Altura em cm
-        data["peso"].append(random.randint(50, 100))  # Peso em kg
+        data["rg"].append(random.randint(10000000, 99999999))  # RG is ofthe a number of eight digits
+        data["altura"].append(random.randint(150, 200))  # Height em cm
+        data["peso"].append(random.randint(50, 100))  # Weight em kg
 
     return pd.DataFrame(data)
 
