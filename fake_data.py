@@ -25,7 +25,7 @@ def generate_fake_data(num_rows):
     return pd.DataFrame(data)
 
 def main():
-    num_rows = 5000
+    num_rows = 50000
     df = generate_fake_data(num_rows)
 
     # Create the dict if it's not exist
