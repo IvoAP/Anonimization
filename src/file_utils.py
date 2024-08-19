@@ -10,7 +10,7 @@ def get_file():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Build the absolute path of the file
-    file_path = os.path.join(script_dir, '..', 'datas', FILE_DDOS_CSV )
+    file_path = os.path.join(script_dir, '..', 'data', FILE_DDOS_CSV )
     print(file_path)
     # Check if the files exists
     if os.path.exists(file_path):
