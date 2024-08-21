@@ -1,10 +1,8 @@
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
-from sklearn.feature_selection import (SelectFromModel, SelectKBest,
-                                       VarianceThreshold, chi2, f_classif,
-                                       mutual_info_classif)
-from sklearn.linear_model import Lasso
+from sklearn.feature_selection import (SelectFromModel, SelectKBest, chi2,
+                                       f_classif, mutual_info_classif)
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
@@ -18,14 +16,6 @@ from ml import cross_validate_k_fold
 def feature_selection(X, y, method, k=None):
     if method == 'chi2':
         selector = SelectKBest(chi2, k= k)
-    elif method == 'lasso':
-        alpha = 0.01 # This need to adjust to be the best lasso
-        lasso = Lasso(alpha=alpha)
-        lasso.fit(X,y)
-        selector = SelectFromModel(lasso, prefit=True)
-    elif method == 'low_variance':
-        threshold = 0.1  # Ajuste conforme necessário
-        selector = VarianceThreshold(threshold)
     elif method == 'extra_trees':
         model = ExtraTreesClassifier(n_estimators=100)
         model.fit(X, y)
@@ -125,9 +115,9 @@ def find_best_results(results, selected_features, feature_method, k):
                                           s['feature_method'] == feature_method and
                                           s['num_features'] == k]
                 if selected_feature_info:
-                    best_result['selected_features'] = selected_feature_info[0]['selected_features_idx']
-                best_result['feature_method'] = feature_method
-                best_result['num_features'] = k
+                    best_result.loc['selected_features'] = selected_feature_info[0]['selected_features_idx']
+                best_result.loc['feature_method'] = feature_method
+                best_result.loc['num_features'] = k
                 best_results.append(best_result)
 
     return pd.DataFrame(best_results)
@@ -135,28 +125,26 @@ def find_best_results(results, selected_features, feature_method, k):
 def Chi2(X, y):
     all_best_results = []
 
-    for i in range(2,12,1):
-        
+    for i in range(2, 10, 1):
         best_results = experiment(X, y, 'chi2', i)
         all_best_results.append(best_results)
-        print(best_results)
+
+    for i in range(10, 80, 5):
+        best_results = experiment(X, y, 'chi2', i)
+        all_best_results.append(best_results)
+
+    # for i in range(2,3,1):
+        
+    #     best_results = experiment(X, y, 'chi2', i)
+    #     all_best_results.append(best_results)
+    #     print(best_results)
 
     final_best_results_df = pd.concat(all_best_results, ignore_index=True)
-    final_best_results_df.to_csv('best_results_chi2.csv', index=False)
-    print("Melhores resultados salvos em 'best_results_chi2.csv'")
+    final_best_results_df.to_csv('results/best_results_chi2.csv', index=False)
+    # print("Melhores resultados salvos em 'best_results_chi2.csv'")
     print(final_best_results_df.head())
 
-def Lasso(X, y):
-    results, selected_features = experiment(X, y, 'lasso', None)
-    
-    best_results = find_best_results(results, selected_features, 'lasso', None)
-    best_results.to_csv('best_results_lasso.csv', index=False)
 
-def LowVariance(X, y):
-    results, selected_features = experiment(X, y, 'low_variance', None)
-    
-    best_results = find_best_results(results, selected_features, 'low_variance', None)
-    best_results.to_csv('best_results_low_variance.csv', index=False)
 
 def ExtraTree(X, y):
     all_best_results = []
@@ -166,7 +154,7 @@ def ExtraTree(X, y):
         all_best_results.append(best_results)
 
     final_best_results_df = pd.concat(all_best_results, ignore_index=True)
-    final_best_results_df.to_csv('best_results_extra_trees.csv', index=False)
+    final_best_results_df.to_csv('results/best_results_extra_trees.csv', index=False)
 
 def ANOVA(X, y):
     all_best_results = []
@@ -180,7 +168,7 @@ def ANOVA(X, y):
         all_best_results.append(best_results)
 
     final_best_results_df = pd.concat(all_best_results, ignore_index=True)
-    final_best_results_df.to_csv('best_results_anova.csv', index=False)
+    final_best_results_df.to_csv('results/best_results_anova.csv', index=False)
 
 def MutualInformation(X, y):
     all_best_results = []
@@ -194,7 +182,7 @@ def MutualInformation(X, y):
         all_best_results.append(best_results)
 
     final_best_results_df = pd.concat(all_best_results, ignore_index=True)
-    final_best_results_df.to_csv('best_results_mutual_info.csv', index=False)
+    final_best_results_df.to_csv('results/best_results_mutual_info.csv', index=False)
 
 
 def main():
@@ -210,10 +198,8 @@ def main():
     del dataset['Label']
     X = np.array(dataset)
 
-  # Escolher o método de seleção de características a ser usado
+  # Choose the feature selection method
     Chi2(X, y)
-    # Lasso(X, y)
-    # LowVariance(X, y)
     # ExtraTree(X, y)
     # ANOVA(X, y)
     # MutualInformation(X, y)
