@@ -1,0 +1,161 @@
+model,anonymized_train,anonymized_test,accuracy,precision,recall,f1_score,selected_features,feature_method,num_features,Scenario
+KNN,True,True,0.958959824793544,0.9644586475640632,0.958959824793544,0.958644017730798,"[76, 77, 78]",chi2,3,"anonymized train
+anonymized test"
+KNN,True,False,0.998539988399824,0.9985434597042604,0.998539988399824,0.9985399846892,"[76, 78]",chi2,2,"not anonymized train
+anonymized test"
+KNN,False,True,0.9792700200956532,0.9800935728790958,0.9792700200956532,0.979260955113674,"[76, 77, 78]",chi2,3,"anonymized train
+not anonymized test"
+KNN,False,False,0.999990000199996,0.999990000799936,0.999990000199996,0.999990000199987,"[76, 77, 78]",chi2,3,"not anonymized train
+not anonymized test"
+Decision Tree,True,True,0.9164814525687708,0.9283443013243848,0.9164814525687708,0.914250469741929,"[76, 78]",chi2,2,"anonymized train
+anonymized test"
+Decision Tree,True,False,0.9201292039919858,0.9204137501706574,0.9201292039919858,0.920064054973726,"[3, 22, 27, 29, 30, 75, 76, 77, 78]",chi2,9,"not anonymized train
+anonymized test"
+Decision Tree,False,True,0.96486965139646,0.9693320294984704,0.96486965139646,0.9645808680451012,"[75, 76, 77, 78]",chi2,4,"anonymized train
+not anonymized test"
+Decision Tree,False,False,1.0,1.0,1.0,1.0,"[3, 27, 29, 30, 75, 76, 77, 78]",chi2,8,"not anonymized train
+not anonymized test"
+Random Forest,True,True,0.9280392830927768,0.9409013883915316,0.9280392830927768,0.9258301813972704,"[76, 78]",chi2,2,"anonymized train
+anonymized test"
+Random Forest,True,False,0.967379958793888,0.9683242835915576,0.967379958793888,0.9673540533633522,"[3, 22, 27, 29, 30, 75, 76, 77, 78]",chi2,9,"not anonymized train
+anonymized test"
+Random Forest,False,True,0.9348993516934628,0.9530981989882372,0.9348993516934628,0.9323392479223118,"[76, 78]",chi2,2,"anonymized train
+not anonymized test"
+Random Forest,False,False,1.0,1.0,1.0,1.0,"[3, 27, 29, 30, 75, 76, 77, 78]",chi2,8,"not anonymized train
+not anonymized test"
+GaussianNB,True,True,0.8480507802618075,0.8817864137663838,0.8480507802618075,0.8425068039769349,"[27, 29, 30, 75, 76, 77, 78]",chi2,7,"anonymized train
+anonymized test"
+GaussianNB,True,False,0.998609996899753,0.9986115131412192,0.998609996899753,0.9986099954197896,"[0, 1, 3, 5, 6, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 38, 39, 41, 42, 43, 44, 46, 48, 49, 54, 56, 61, 62, 66, 67, 68, 75, 76, 77, 78]",chi2,50,"not anonymized train
+anonymized test"
+GaussianNB,False,True,0.7778600924546475,0.8139976211587596,0.7778600924546475,0.7712922218704287,"[76, 78]",chi2,2,"anonymized train
+not anonymized test"
+GaussianNB,False,False,0.999569998699927,0.9995700832395976,0.999569998699927,0.9995699986859954,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 53, 54, 55, 56, 61, 62, 63, 64, 66, 67, 68, 69, 70, 74, 75, 76, 77, 78]",chi2,65,"not anonymized train
+not anonymized test"
+Mutilayer Perceptron,True,True,0.9778700366952072,0.978792296746242,0.9778700366952072,0.9778587566789726,"[27, 75, 76, 77, 78]",chi2,5,"anonymized train
+anonymized test"
+Mutilayer Perceptron,True,False,0.988050108796522,0.9884297737441252,0.988050108796522,0.9880459129559253,"[75, 76, 77, 78]",chi2,4,"not anonymized train
+anonymized test"
+Mutilayer Perceptron,False,True,0.97727017739368,0.9778778260192222,0.97727017739368,0.9772602994950552,"[76, 78]",chi2,2,"anonymized train
+not anonymized test"
+Mutilayer Perceptron,False,False,0.999980000099995,0.9999800012998932,0.999980000099995,0.999980000099968,"[0, 1, 3, 4, 5, 6, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 53, 54, 56, 61, 62, 64, 66, 67, 68, 75, 76, 77, 78]",chi2,55,"not anonymized train
+not anonymized test"
+KNN,True,True,0.7932709515491387,0.8431565599519285,0.7932709515491387,0.7817624106846165,"[46, 76]",anova,2,"anonymized train
+anonymized test"
+KNN,True,False,0.8774001431740484,0.8914843089525321,0.8774001431740484,0.8762970386036032,"[46, 76]",anova,2,"not anonymized train
+anonymized test"
+KNN,False,True,0.829418527880605,0.8832018338673356,0.829418527880605,0.8178126384883161,"[46, 76]",anova,2,"anonymized train
+not anonymized test"
+KNN,False,False,0.999990000199996,0.999990000799936,0.999990000199996,0.999990000199987,"[1, 45, 46, 47, 76, 77]",anova,6,"not anonymized train
+not anonymized test"
+Decision Tree,True,True,0.891608918789134,0.9099190001670868,0.891608918789134,0.8890386660275346,"[1, 45, 46, 47, 68, 76, 77]",anova,7,"anonymized train
+anonymized test"
+Decision Tree,True,False,0.9431811318773176,0.9540071090852512,0.9431811318773176,0.9418826509439072,"[0, 1, 2, 3, 5, 8, 12, 13, 14, 15, 17, 22, 27, 28, 29, 30, 32, 38, 39, 41, 43, 44, 45, 46, 47, 53, 56, 62, 66, 67, 68, 75, 76, 77, 78]",anova,35,"not anonymized train
+anonymized test"
+Decision Tree,False,True,0.8948816361626147,0.9009989544271624,0.8948816361626147,0.893370409268945,"[1, 45, 46, 47, 53, 68, 76, 77]",anova,8,"anonymized train
+not anonymized test"
+Decision Tree,False,False,1.0,1.0,1.0,1.0,"[1, 45, 46, 47, 76, 77]",anova,6,"not anonymized train
+not anonymized test"
+Random Forest,True,True,0.8431307220614054,0.8696082196506509,0.8431307220614054,0.8382983431544696,"[46, 47, 76]",anova,3,"anonymized train
+anonymized test"
+Random Forest,True,False,0.8955403176759313,0.920472582513942,0.8955403176759313,0.8928202682595332,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 53, 54, 55, 56, 61, 62, 63, 64, 66, 67, 68, 69, 70, 74, 75, 76, 77, 78]",anova,65,"not anonymized train
+anonymized test"
+Random Forest,False,True,0.917779412989426,0.9344276338629666,0.917779412989426,0.9153297014989484,"[46, 76]",anova,2,"anonymized train
+not anonymized test"
+Random Forest,False,False,0.999990000199996,0.999990000799936,0.999990000199996,0.999990000199987,"[1, 45, 46, 47, 76, 77]",anova,6,"not anonymized train
+not anonymized test"
+GaussianNB,True,True,0.7776200933545905,0.81361371662167,0.7776200933545905,0.7710644349787268,"[46, 76]",anova,2,"anonymized train
+anonymized test"
+GaussianNB,True,False,0.9962200398988452,0.9962524458996324,0.9962200398988452,0.9962199194055248,"[0, 1, 2, 3, 5, 7, 8, 11, 12, 13, 14, 15, 16, 17, 22, 27, 28, 29, 30, 32, 36, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 48, 49, 53, 54, 56, 62, 63, 66, 67, 68, 75, 76, 77, 78]",anova,45,"not anonymized train
+anonymized test"
+GaussianNB,False,True,0.7490297810519954,0.6775614906471148,0.7490297810519954,0.6912468221787161,"[46, 76]",anova,2,"anonymized train
+not anonymized test"
+GaussianNB,False,False,0.999569998699927,0.9995700832395976,0.999569998699927,0.9995699986859954,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 53, 54, 55, 56, 61, 62, 63, 64, 66, 67, 68, 69, 70, 74, 75, 76, 77, 78]",anova,65,"not anonymized train
+not anonymized test"
+Mutilayer Perceptron,True,True,0.7797700374555795,0.8170492168098392,0.7797700374555795,0.7731008092774946,"[46, 76]",anova,2,"anonymized train
+anonymized test"
+Mutilayer Perceptron,True,False,0.8443807573613026,0.8680676003741564,0.8443807573613026,0.8400217964430726,"[1, 45, 46, 47, 53, 56, 68, 76, 77]",anova,9,"not anonymized train
+anonymized test"
+Mutilayer Perceptron,False,True,0.8026509976505537,0.8513698233623499,0.8026509976505537,0.7911988480302727,"[46, 76]",anova,2,"anonymized train
+not anonymized test"
+Mutilayer Perceptron,False,False,0.999990000199996,0.999990000799936,0.999990000199996,0.999990000199987,"[1, 45, 46, 47, 53, 56, 68, 76, 77]",anova,9,"not anonymized train
+not anonymized test"
+KNN,True,True,0.5763807689075872,0.5031211710707437,0.5763807689075872,0.5199363213262702,"[1, 2, 3, 8, 10, 20, 22, 25, 41, 43, 45, 46, 47, 54, 64, 67, 68, 70, 75, 76, 77]",extra_trees,28,"anonymized train
+anonymized test"
+KNN,True,False,0.7990700471593425,0.8498075953164882,0.7990700471593425,0.7915155199765246,"[1, 2, 3, 8, 19, 20, 22, 25, 27, 41, 45, 46, 47, 53, 64, 68, 70, 75, 76, 77, 78]",extra_trees,68,"not anonymized train
+anonymized test"
+KNN,False,True,0.6828401307352606,0.7780089980602432,0.6828401307352606,0.6535041878469449,"[1, 2, 3, 8, 10, 18, 19, 20, 22, 23, 25, 41, 42, 45, 46, 47, 54, 64, 68, 70, 75, 76, 77, 78]",extra_trees,18,"anonymized train
+not anonymized test"
+KNN,False,False,0.999990000199996,0.999990000799936,0.999990000199996,0.999990000199987,"[1, 2, 3, 8, 10, 20, 22, 23, 41, 42, 45, 46, 47, 64, 68, 70, 75, 76, 77, 78]",extra_trees,33,"not anonymized train
+not anonymized test"
+Decision Tree,True,True,0.7935218036406679,0.8656789005681785,0.7935218036406679,0.7684690691199335,"[1, 2, 3, 12, 20, 22, 23, 25, 41, 45, 46, 47, 63, 64, 68, 70, 75, 76, 77, 78]",extra_trees,23,"anonymized train
+anonymized test"
+Decision Tree,True,False,0.952929532295263,0.9624348049874328,0.952929532295263,0.952107707604112,"[1, 2, 3, 8, 10, 20, 22, 24, 25, 41, 45, 46, 47, 55, 68, 70, 75, 76, 77, 78]",extra_trees,43,"not anonymized train
+anonymized test"
+Decision Tree,False,True,0.8403207203608606,0.863038981692872,0.8403207203608606,0.8360375797394702,"[1, 2, 3, 18, 20, 22, 25, 41, 42, 45, 46, 47, 63, 64, 68, 70, 75, 76, 77, 78]",extra_trees,78,"anonymized train
+not anonymized test"
+Decision Tree,False,False,1.0,1.0,1.0,1.0,"[1, 2, 3, 8, 10, 20, 22, 23, 24, 25, 27, 45, 46, 47, 53, 64, 68, 70, 75, 76, 77, 78]",extra_trees,3,"not anonymized train
+not anonymized test"
+Random Forest,True,True,0.9667603194901572,0.9696629747481688,0.9667603194901572,0.9666635368804424,"[1, 2, 3, 10, 12, 18, 20, 22, 25, 27, 41, 42, 45, 46, 47, 53, 54, 68, 70, 75, 76, 77, 78]",extra_trees,13,"anonymized train
+anonymized test"
+Random Forest,True,False,0.9089695450863432,0.9285431335609898,0.9089695450863432,0.906526658567156,"[1, 2, 3, 20, 22, 23, 25, 42, 45, 46, 47, 54, 55, 68, 70, 75, 76, 77, 78]",extra_trees,3,"not anonymized train
+anonymized test"
+Random Forest,False,True,0.7216492027523023,0.808562097100303,0.7216492027523023,0.698075309910075,"[1, 2, 3, 8, 14, 19, 20, 22, 23, 25, 41, 45, 46, 47, 53, 64, 68, 70, 75, 76, 77, 78]",extra_trees,28,"anonymized train
+not anonymized test"
+Random Forest,False,False,0.999990000199996,0.999990000799936,0.999990000199996,0.999990000199987,"[1, 2, 3, 8, 10, 19, 20, 22, 23, 24, 25, 27, 45, 46, 47, 53, 64, 67, 68, 70, 75, 76, 77, 78]",extra_trees,3,"not anonymized train
+not anonymized test"
+GaussianNB,True,True,0.5565705657056571,0.4337040552829188,0.5565705657056571,0.4319784684444959,"[1, 2, 3, 19, 20, 22, 24, 25, 27, 45, 46, 47, 68, 70, 75, 76, 77, 78]",extra_trees,63,"anonymized train
+anonymized test"
+GaussianNB,True,False,0.993160016798464,0.993273945257667,0.993160016798464,0.9931594338124596,"[1, 2, 3, 18, 19, 20, 22, 23, 24, 25, 41, 42, 45, 46, 47, 54, 64, 68, 70, 75, 76, 77, 78]",extra_trees,28,"not anonymized train
+anonymized test"
+GaussianNB,False,True,0.6656516565165652,0.6275818106015197,0.6656516565165652,0.5999351977376096,"[1, 2, 3, 14, 18, 19, 20, 22, 25, 27, 41, 43, 45, 46, 47, 68, 70, 75, 76, 77, 78]",extra_trees,58,"anonymized train
+not anonymized test"
+GaussianNB,False,False,0.999740000399944,0.9997401383251292,0.999740000399944,0.9997400003815844,"[1, 2, 3, 20, 22, 24, 25, 41, 42, 43, 45, 46, 55, 67, 68, 70, 75, 76, 77]",extra_trees,33,"not anonymized train
+not anonymized test"
+Mutilayer Perceptron,True,True,0.7207495228489215,0.8080077210118248,0.7207495228489215,0.6981285996331031,"[1, 2, 3, 20, 22, 23, 24, 25, 27, 41, 45, 46, 47, 55, 63, 68, 70, 75, 76, 77, 78]",extra_trees,18,"anonymized train
+anonymized test"
+Mutilayer Perceptron,True,False,0.7939501504572855,0.8383719813300637,0.7939501504572855,0.7870855613117133,"[1, 2, 3, 8, 10, 12, 18, 19, 20, 22, 23, 25, 27, 42, 45, 46, 47, 53, 55, 64, 68, 70, 75, 76, 77, 78]",extra_trees,3,"not anonymized train
+anonymized test"
+Mutilayer Perceptron,False,True,0.8122802518599374,0.8129105679202006,0.8122802518599374,0.811933689311358,"[1, 2, 3, 10, 19, 20, 22, 25, 40, 41, 45, 46, 47, 54, 64, 68, 70, 75, 76, 77, 78]",extra_trees,58,"anonymized train
+not anonymized test"
+Mutilayer Perceptron,False,False,0.999990000199996,0.999990000799936,0.999990000199996,0.999990000199987,"[1, 2, 3, 12, 20, 22, 23, 24, 25, 27, 41, 45, 46, 47, 54, 64, 68, 70, 75, 76, 77, 78]",extra_trees,13,"not anonymized train
+not anonymized test"
+KNN,True,True,0.8757807146680094,0.9088924576820564,0.8757807146680094,0.8714011967689839,"[41, 67, 77]",mutual_info,3,"anonymized train
+anonymized test"
+KNN,True,False,0.9116004173781465,0.9299564423500484,0.9116004173781465,0.9100334233229392,"[8, 41, 67, 77]",mutual_info,4,"not anonymized train
+anonymized test"
+KNN,False,True,0.6665916659166592,0.4999250287123575,0.6665916659166592,0.5554799992853545,"[41, 67, 77]",mutual_info,3,"anonymized train
+not anonymized test"
+KNN,False,False,0.999980000099995,0.9999800012998932,0.999980000099995,0.999980000099968,"[41, 67]",mutual_info,2,"not anonymized train
+not anonymized test"
+Decision Tree,True,True,0.999850001199958,0.9998500713637968,0.999850001199958,0.9998500011911292,"[8, 41, 67, 77]",mutual_info,4,"anonymized train
+anonymized test"
+Decision Tree,True,False,0.999760000299949,0.9997601190399856,0.999760000299949,0.999760000285288,"[41, 55, 67, 77]",mutual_info,4,"not anonymized train
+anonymized test"
+Decision Tree,False,True,0.999760000299949,0.9997601190399856,0.999760000299949,0.999760000285288,"[41, 67, 77]",mutual_info,3,"anonymized train
+not anonymized test"
+Decision Tree,False,False,1.0,1.0,1.0,1.0,"[41, 67, 77]",mutual_info,3,"not anonymized train
+not anonymized test"
+Random Forest,True,True,0.999760000299949,0.9997601190399856,0.999760000299949,0.999760000285288,"[8, 41, 55, 67, 77]",mutual_info,5,"anonymized train
+anonymized test"
+Random Forest,True,False,0.999649999199938,0.9996500717602248,0.999649999199938,0.9996499991900292,"[8, 10, 41, 67, 77]",mutual_info,5,"not anonymized train
+anonymized test"
+Random Forest,False,True,0.999760000299949,0.9997601190399856,0.999760000299949,0.999760000285288,"[8, 41, 67, 77]",mutual_info,4,"anonymized train
+not anonymized test"
+Random Forest,False,False,1.0,1.0,1.0,1.0,"[8, 41, 67, 77]",mutual_info,4,"not anonymized train
+not anonymized test"
+GaussianNB,True,True,0.9217197076872672,0.9327543097563388,0.9217197076872672,0.9211473016140942,"[41, 67, 77]",mutual_info,3,"anonymized train
+anonymized test"
+GaussianNB,True,False,0.999170001299821,0.9991702223134524,0.999170001299821,0.9991700012026218,"[0, 1, 3, 4, 6, 8, 9, 10, 11, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 30, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 49, 54, 55, 64, 67, 68, 69, 70, 75, 76, 77, 78]",mutual_info,45,"not anonymized train
+anonymized test"
+GaussianNB,False,True,0.8331583342832888,0.7498250981729827,0.8331583342832888,0.7776033343208967,"[41, 67, 77]",mutual_info,3,"anonymized train
+not anonymized test"
+GaussianNB,False,False,0.9996899998999388,0.9996900988420624,0.9996899998999388,0.9996899998858992,"[1, 3, 6, 8, 10, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 36, 38, 41, 42, 46, 54, 55, 64, 67, 70, 75, 76, 77, 78]",mutual_info,30,"not anonymized train
+not anonymized test"
+Mutilayer Perceptron,True,True,0.999760000299949,0.9997601190399856,0.999760000299949,0.999760000285288,"[41, 67, 77]",mutual_info,3,"anonymized train
+anonymized test"
+Mutilayer Perceptron,True,False,0.8680111637619645,0.9054763733458392,0.8680111637619645,0.8616694249429028,"[10, 41, 67, 77]",mutual_info,4,"not anonymized train
+anonymized test"
+Mutilayer Perceptron,False,True,0.8331583342832888,0.7498250981729827,0.8331583342832888,0.7776033343208967,"[8, 41, 67, 77]",mutual_info,4,"anonymized train
+not anonymized test"
+Mutilayer Perceptron,False,False,0.999980000099995,0.9999800012998932,0.999980000099995,0.999980000099968,"[3, 6, 8, 10, 16, 17, 18, 19, 20, 22, 23, 24, 25, 38, 41, 42, 46, 54, 55, 64, 67, 75, 76, 77, 78]",mutual_info,25,"not anonymized train
+not anonymized test"
